@@ -3,7 +3,7 @@
 ## O que é este projeto?
 Este projeto foi o primeiro desenvolvido no curso de Flutter da Cod3r na [Udemy](https://www.udemy.com/course/curso-flutter/).
 
-## O que ele tem de diferente? E porque possui 2 versões?
+## O que ele tem de diferente? E porque possui 2 branchs?
 No método de estudos que tenho ao fazer cursos, sempre assisto as aulas e replico o projeto apresentado tentando adicionar alguma coisa, ou melhorar a sintaxe, lógica, qualquer coisa que possa agregar e diferenciar o meu projeto do apresentado no curso. É claro que meu objetivo não é de forma alguma denegrir o projeto do curso, mas sim tentar mostrar o que consigo fazer de diferente com meus conhecimentos (que nem sempre podem estar certos).
 
 #### Obrigado por estar visitando este projeto, espero que goste!
