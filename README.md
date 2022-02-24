@@ -19,3 +19,6 @@ This project was first developed in Cod3r's Flutter course on [Udemy](https://ww
 In the method of studies that I have when taking courses, I always attend classes and replicate the presented project trying to add something, or improve the syntax, logic, anything that can add and differentiate my project from the one presented in the course. Of course, my goal is not in any way to denigrate the course project, but rather to try to show what I can do differently with my knowledge (which cannot always be right).
 
 #### Thank you for visiting this project, I hope you like it!
+
+https://user-images.githubusercontent.com/61558146/155618881-651f0645-22ed-4ea1-a07f-23f3985486a5.mp4
+
