@@ -1,4 +1,4 @@
-# simples_quiz
+# simple_quiz
 
 ## O que é este projeto?
 Este projeto foi o primeiro desenvolvido no curso de Flutter da Cod3r na [Udemy](https://www.udemy.com/course/curso-flutter/).
@@ -10,7 +10,7 @@ No método de estudos que tenho ao fazer cursos, sempre assisto as aulas e repli
 
 ---
 
-# simples_quiz
+# simple_quiz
 
 ## What is this project?
 This project was first developed in Cod3r's Flutter course on [Udemy](https://www.udemy.com/course/curso-flutter/).
