@@ -15,7 +15,7 @@ No método de estudos que tenho ao fazer cursos, sempre assisto as aulas e repli
 ## What is this project?
 This project was first developed in Cod3r's Flutter course on [Udemy](https://www.udemy.com/course/curso-flutter/).
 
-## What's different about him? And why has 2 versions?
+## What's different about him? And why has 2 branchs?
 In the method of studies that I have when taking courses, I always attend classes and replicate the presented project trying to add something, or improve the syntax, logic, anything that can add and differentiate my project from the one presented in the course. Of course, my goal is not in any way to denigrate the course project, but rather to try to show what I can do differently with my knowledge (which cannot always be right).
 
 #### Thank you for visiting this project, I hope you like it!
