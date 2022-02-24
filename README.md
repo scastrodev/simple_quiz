@@ -1,4 +1,4 @@
-# first_project_quiz
+# simples_quiz
 
 ## O que é este projeto?
 Este projeto foi o primeiro desenvolvido no curso de Flutter da Cod3r na [Udemy](https://www.udemy.com/course/curso-flutter/).
