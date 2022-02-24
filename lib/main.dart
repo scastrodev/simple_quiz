@@ -1,86 +1,83 @@
 import 'package:flutter/material.dart';
-import 'package:simple_quiz/questionnaire.dart';
-import 'questions.dart';
-import 'package:simple_quiz/result.dart';
+import './questionario.dart';
+import './resultado.dart';
 
-void main() => runApp(const QuizApp());
+main() => runApp(new PerguntaApp());
 
-class QuizApp extends StatelessWidget {
-  const QuizApp({Key? key}) : super(key: key);
+class _PerguntaAppState extends State<PerguntaApp> {
+  var _perguntaSelecionada = 0;
+  var _pontuacaoTotal = 0;
+  final _perguntas = const [
+    {
+      'texto': 'Qual é a sua cor favorita?',
+      'respostas': [
+        {'texto': 'Preto', 'pontuacao': 10},
+        {'texto': 'Vermelho', 'pontuacao': 5},
+        {'texto': 'Verde', 'pontuacao': 3},
+        {'texto': 'Branco', 'pontuacao': 1},
+      ],
+    },
+    {
+      'texto': 'Qual é o seu animal favorito?',
+      'respostas': [
+        {'texto': 'Coelho', 'pontuacao': 10},
+        {'texto': 'Cobra', 'pontuacao': 5},
+        {'texto': 'Elefante', 'pontuacao': 3},
+        {'texto': 'Leão', 'pontuacao': 1},
+      ],
+    },
+    {
+      'texto': 'Qual é o seu instrutor favorito?',
+      'respostas': [
+        {'texto': 'Leo', 'pontuacao': 10},
+        {'texto': 'Maria', 'pontuacao': 5},
+        {'texto': 'João', 'pontuacao': 3},
+        {'texto': 'Pedro', 'pontuacao': 1},
+      ],
+    }
+  ];
+
+  void _responder(int pontuacao) {
+    if (temPerguntaSelecionada) {
+      setState(() {
+        _perguntaSelecionada++;
+        _pontuacaoTotal += pontuacao;
+      });
+    }
+  }
+
+  void _reiniciarQuestionario() {
+    setState(() {
+      _perguntaSelecionada = 0;
+      _pontuacaoTotal = 0;
+    });
+  }
+
+  bool get temPerguntaSelecionada {
+    return _perguntaSelecionada < _perguntas.length;
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const HomePage(),
-      theme: ThemeData(
-        textTheme: Theme.of(context).textTheme.apply(
-              bodyColor: Colors.grey[900],
-              displayColor: Colors.grey[900],
-            ),
-      ),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  var _selectedQuestion = 0;
-
-  List<Widget> answers = [];
-
-  get isQuestionAvailable => _selectedQuestion < questions.length;
-
-  int _totalScore = 0;
-
-  void _onAnswer(bool isCorrect, int questionScore) {
-    if (isQuestionAvailable) {
-      setState(() {
-        _selectedQuestion++;
-      });
-    }
-    if (isCorrect) {
-      _totalScore += questionScore;
-    }
-
-    debugPrint('$_totalScore');
-  }
-
-  void _resetQuestions() {
-    setState(() {
-      _selectedQuestion = 0;
-      _totalScore = 0;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Quiz'), centerTitle: true),
-      body: SizedBox.expand(
-        child: isQuestionAvailable
-            ? Column(
-                children: [
-                  Questionnaire(
-                    selectedQuestion: _selectedQuestion,
-                    onAnswer: _onAnswer,
-                  ),
-                  const SizedBox(height: 20),
-                  Text(
-                    'Score of this question: ${questions.elementAt(_selectedQuestion)['questionScore']}',
-                    style: Theme.of(context).textTheme.headline6,
-                    textAlign: TextAlign.center,
-                  ),
-                ],
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Perguntas'),
+        ),
+        body: temPerguntaSelecionada
+            ? Questionario(
+                perguntas: _perguntas,
+                perguntaSelecionada: _perguntaSelecionada,
+                quandoResponder: _responder,
               )
-            : Result(resetQuestions: _resetQuestions, totalScore: _totalScore),
+            : Resultado(_pontuacaoTotal, _reiniciarQuestionario),
       ),
     );
+  }
+}
+
+class PerguntaApp extends StatefulWidget {
+  _PerguntaAppState createState() {
+    return _PerguntaAppState();
   }
 }
