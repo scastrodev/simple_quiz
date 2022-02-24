@@ -10,7 +10,7 @@ No método de estudos que tenho ao fazer cursos, sempre assisto as aulas e repli
 
 ---
 
-# first_project_quiz
+# simples_quiz
 
 ## What is this project?
 This project was first developed in Cod3r's Flutter course on [Udemy](https://www.udemy.com/course/curso-flutter/).
