@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:simple_quiz/answer.dart';
-import 'package:simple_quiz/question.dart';
+import 'package:simple_quiz/app/answer.dart';
+import 'package:simple_quiz/app/question.dart';
+
 import 'questions.dart';
 
 class Questionnaire extends StatelessWidget {
@@ -27,7 +28,8 @@ class Questionnaire extends StatelessWidget {
                     text: answer['value'],
                     handleClick: () => onAnswer(
                       answer['isCorrect'],
-                      questions.elementAt(selectedQuestion)['questionScore'] as int,
+                      questions.elementAt(selectedQuestion)['questionScore']
+                          as int,
                     ),
                   ))
               .toList()

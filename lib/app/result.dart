@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_quiz/answer.dart';
+import 'package:simple_quiz/app/answer.dart';
 
 class Result extends StatelessWidget {
   const Result({
@@ -29,7 +29,8 @@ class Result extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(resultText, style: Theme.of(context).textTheme.headline5),
-        Text('Your score was: $totalScore', style: Theme.of(context).textTheme.headline6),
+        Text('Your score was: $totalScore',
+            style: Theme.of(context).textTheme.headline6),
         Answer(
           text: 'Restart',
           handleClick: resetQuestions,
